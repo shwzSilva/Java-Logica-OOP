@@ -1,26 +1,26 @@
-package oop;
-
+package oop.aula04;
 import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        double xA, xB, xC, yA, yB, yC;
+        Triangulo x,y;
+        x = new Triangulo();
+        y = new Triangulo();
+
         System.out.println("Digite o valor dos lados do triângulo X: ");
-        xA = sc.nextDouble();
-        xB = sc.nextDouble();
-        xC = sc.nextDouble();
+        x.a = sc.nextDouble();
+        x.b = sc.nextDouble();
+        x.c = sc.nextDouble();
+
         System.out.println("Digite o valor dos lados do triângulo Y: ");
-        yA = sc.nextDouble();
-        yB = sc.nextDouble();
-        yC = sc.nextDouble();
+        y.a = sc.nextDouble();
+        y.b = sc.nextDouble();
+        y.c = sc.nextDouble();
 
-        double result = (xA + xB + xC) / 2.0;
-        double areaX = Math.sqrt(result *(result - xA) * (result - xB) * (result - xC));
-
-        result = (yA + yB + yC) / 2.0;
-        double areaY = Math.sqrt(result *(result - yA) * (result - yB) * (result - yC));
+        double areaX = x.area();
+        double areaY = y.area();
 
         System.out.printf("A area do triângulo X e: %.2f%n", areaX);
         System.out.printf("A area do triângulo Y e: %.2f%n", areaY);
